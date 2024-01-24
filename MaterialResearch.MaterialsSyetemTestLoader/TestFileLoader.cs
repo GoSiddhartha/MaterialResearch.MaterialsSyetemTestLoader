@@ -3,7 +3,6 @@ using System.Net;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 
 namespace MaterialResearch.MaterialsSyetemTestLoader;
 
@@ -23,9 +22,12 @@ public class TestFileLoader
         _logger.LogInformation("C# HTTP trigger function processed a request.");
 
         var response = req.CreateResponse(HttpStatusCode.OK);
-        response.Headers.Add("Content-Type", "application/json; charset=utf-8");
-        
-        response.WriteString("Hello World!");
+        response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
+        StreamReader reader = new StreamReader( req.Body );
+        string requestText = reader.ReadToEnd();
+        response.WriteString("Hello World! ");
+
+        response.WriteString("I did it, Vibeke!");
 
         return response;
     }
