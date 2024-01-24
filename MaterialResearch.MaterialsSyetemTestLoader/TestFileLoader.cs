@@ -26,7 +26,7 @@ public class TestFileLoader
         response.Headers.Add("Content-Type", "application/json; charset=utf-8");
         StreamReader reader = new StreamReader( req.Body );
         string requestText = reader.ReadToEnd();
-        string repoName = req.Query["repoName"];
+        string repoName = req.Query["name"];
         dynamic data = JsonConvert.DeserializeObject(requestText);
         
         repoName = repoName ?? data?.repoName;
