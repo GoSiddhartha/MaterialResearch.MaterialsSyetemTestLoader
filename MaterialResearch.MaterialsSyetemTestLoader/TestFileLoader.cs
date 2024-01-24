@@ -30,6 +30,5 @@ public class TestFileLoader
         response.WriteString("I did it, Vibeke!");
 
         return response;
-        
     }
 }
