@@ -22,7 +22,6 @@ public class TestFileLoader
         FunctionContext executionContext)
     {
         var response = req.CreateResponse(HttpStatusCode.OK);
-       
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
     
