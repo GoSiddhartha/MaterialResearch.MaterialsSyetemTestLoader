@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <AzureFunctionsVersion>v4</AzureFunctionsVersion>
@@ -6,11 +6,12 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    </PropertyGroup>
+      <UserSecretsId>fc359a29-f790-479a-ac4c-bedcc02a41bc</UserSecretsId>
+  </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Microsoft.Azure.Functions.Worker" Version="1.19.0"/>
+        <PackageReference Include="Microsoft.Azure.Functions.Worker" Version="1.19.0" />
         <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Http" Version="3.1.0" />
-        <PackageReference Include="Microsoft.Azure.Functions.Worker.Sdk" Version="1.15.1"/>
+        <PackageReference Include="Microsoft.Azure.Functions.Worker.Sdk" Version="1.15.1" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     </ItemGroup>
     <ItemGroup>
@@ -23,7 +24,7 @@
         </None>
     </ItemGroup>
     <ItemGroup>
-        <Using Include="System.Threading.ExecutionContext" Alias="ExecutionContext"/>
+        <Using Include="System.Threading.ExecutionContext" Alias="ExecutionContext" />
     </ItemGroup>
     <ItemGroup>
       <Content Include="..\.dockerignore">
